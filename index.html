@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive single-page application simulation with client-side routing and dynamic views.">
+  <meta name="theme-color" content="#172b4d">
+  <title>Orbit — SPA Simulation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#/home" aria-label="Orbit home"><span class="brand-mark" aria-hidden="true">O</span> orbit<span class="brand-dot">.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span aria-hidden="true">☰</span><span>Menu</span></button>
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <a href="#/home" data-route="home">Home</a><a href="#/dashboard" data-route="dashboard">Dashboard</a><a href="#/projects" data-route="projects">Projects</a><a href="#/about" data-route="about">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell main-content" tabindex="-1">
+    <div class="page-intro">
+      <p class="eyebrow">WEEK 5 · SPA SIMULATION</p>
+      <h1>One app. Different views. No full-page refresh.</h1>
+      <p class="lead">Explore client-side navigation, URL routing, and dynamically rendered content in a small, responsive single-page application.</p>
+    </div>
+    <div class="app-layout">
+      <aside class="sidebar" aria-label="Quick navigation">
+        <p class="sidebar-label">WORKSPACE</p>
+        <a href="#/home" data-route="home"><span aria-hidden="true">⌂</span> Overview</a>
+        <a href="#/dashboard" data-route="dashboard"><span aria-hidden="true">▦</span> Dashboard</a>
+        <a href="#/projects" data-route="projects"><span aria-hidden="true">◇</span> Projects</a>
+        <a href="#/about" data-route="about"><span aria-hidden="true">ⓘ</span> About this demo</a>
+        <div class="sidebar-tip"><strong>Try it out</strong><p>Switch views, refresh the browser, then use Back and Forward. The route in the URL tracks the current view.</p></div>
+      </aside>
+      <section id="view" class="view-panel" aria-live="polite" aria-busy="false" aria-label="Application content">
+        <div class="loading-state"><span class="loader" aria-hidden="true"></span><p>Loading application view…</p></div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><p>Orbit SPA Simulation</p><p>Built with HTML, CSS, and vanilla JavaScript</p></div></footer>
+</body>
+</html>
